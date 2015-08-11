@@ -1,0 +1,32 @@
+Start with mobile first -- Bootstrap is apparently good at handling different size devices
+
+Different groups - D&D / LAN / WAN / Game Night / Star Wars
+
+What would the home page be? Recap of whatever happened previously at one of these events?
+
+Each page would need its own way to interact with users, which means the site would have to have some way to sign up.
+
+Tabs at top with one content space in the middle, split between interaction and display.
+
+Check out othet site designs that may offer a similar service.
+
+D&D ---> Mostly a discussion of when people can meet up and a summary of what has happened so far.
+	 Would also be helpful to have a general discussion part to talk about future adventures or characters.
+
+LAN ---> Need a section saying what date you are available to come to an event. Calendar would be nice, checkmark days.
+	 Also need a portion to elect games that we want to play and discuss each one?
+	 Then when things are decided publish what was decided and some tasks for people to do before they arrive.
+	    -> Also send notifications to people who haven't responded
+
+WAN ---> A day where we play games online and to kind of decide which we are interested in now and who else might want to join.
+	 Maybe a different game each week? Try out different stuff and later on put it on a stream.
+
+Game Night --> This one is mostly the same schedule each week. Would just to facilitate where it would be located
+	       and also what games we might want to try out that time and talk about other games we might have heard
+               about and whether someone wants to get it. Andy's input would be good.
+
+Star Wars ---> Date fluctuates moreso than the D&D event so it would use the Calendar portion of the LAN portion and
+	       maybe a general discussion portion to talk about other things related to the game. Interactve Calendar,
+	       click something for Yes you can make it, click other for no you can't. Add totals to see what day works
+               best.
+
