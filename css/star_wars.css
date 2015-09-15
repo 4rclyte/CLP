@@ -1,0 +1,118 @@
+/*==== Fonts ====*/
+
+@font-face {
+    font-family: Starjedi;
+    src: url(../fonts/star_wars/Starjedi.ttf);
+}
+
+@font-face {
+    font-family: Starjmono;
+    src: url(../fonts/star_wars/Starjmono.ttf);
+}
+
+@font-face {
+    font-family: Starjout;
+    src: url(../fonts/star_wars/Starjout.ttf);
+}
+
+@font-face {
+    font-family: Starjhol;
+    src: url(../fonts/star_wars/Starjhol.ttf);
+}
+
+@font-face {
+    font-family: SF-Distant-Galaxy-AltOutline;
+    src: url(../fonts/star_wars/SF-Distant-Galaxy-AltOutline.ttf);
+}
+
+
+/*==== Colors ====
+Black, White and Yellow
+*/
+
+
+/*==== Global ====*/
+
+
+body/*, html             was having background color issues */
+ {
+	background: #000;
+}
+
+a {
+	color: blue;
+	font-weight: normal;
+}
+
+h1 {
+	font-family: Starjedi;
+	font-weight: normal;
+	font-size: 2.8em;
+	/* background-color: #de7329;  looks a bit off last time it was tried */
+}
+
+/* Need to apply a different style to */
+h2 {
+	font-family: Starjhol;
+	font-size: 1.8em;
+	float: left;
+}
+
+hr {
+	height: 2px;
+	margin-top: -27px;
+	background-image: linear-gradient(to right, rgba(190, 190, 190, .4), rgba(160, 160, 160, 0.85), rgba(40, 40, 160, .9), rgba(50, 50, 150, 0));
+}
+
+/*==== Header ====*/
+
+.navbar {
+	font-size: 1.5em;
+}
+
+.navbar select {
+	font-family: SF-Distant-Galaxy-AltOutline, Arial;
+	font-size: 1.0em;
+}
+
+.navbar li {
+	font-family: SF-Distant-Galaxy-AltOutline, Arial;
+	font-size: 1em;
+}
+
+.navbar a {
+    color: yellow;
+}
+
+.navbar a:hover {
+    background-color: white;
+	color: blue;
+	text-shadow: 2px 1px 0 lightblue;
+}
+
+#colorscheme select {
+	font-family: SF-Distant-Galaxy-AltOutline, Arial;
+	font-size: 1.35em;
+	font-weight: none;
+	background-color: black;
+	color: yellow;
+	display: none;  /* Currently Removing it from Star_Wars page */
+	/* Make button rounder? Spice it up...and fix alignment */
+}
+
+/*==== Content ====*/
+
+#content {
+	color: black;
+	background: white;
+	font-family: Starjmono, Helvetica;
+	font-size: 1em;
+}
+
+#interaction {
+	color: black;
+	background: red;
+	font-family: Starjedi, Helvetica;
+	font-size: 1em;
+}
+

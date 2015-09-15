@@ -1,0 +1,106 @@
+/*==== Fonts ====*/
+
+@font-face {
+    font-family: Oldsh;
+    src: url(../fonts/table_top/OLDSH.ttf);
+}
+
+@font-face {
+    font-family: Ye-Olde-Oak;
+    src: url(../fonts/table_top/Ye-Olde-Oak.ttf);
+}
+
+
+/*==== Colors ====
+Pinsir: 
+
+lightest: #eee6cd
+dominant: #c5ac8b
+middle: #836a52
+darkest: #5a4131
+*/
+
+
+/*==== Global ====*/
+
+
+body/*, html             was having background color issues */
+ {
+	background: #5a4131;
+}
+
+a {
+	color: #eee6cd;
+}
+
+h1 {
+	font-family: Ye-Olde-Oak;
+	font-weight: normal;
+	font-size: 2.8em;
+	/* background-color: #de7329;  looks a bit off last time it was tried */
+}
+
+/* Need to apply a different style to */
+h2 {
+	font-family: Oldsh;
+	font-size: 1.8em;
+	float: left;
+}
+
+hr {
+	height: 2px;
+	margin-top: -27px;
+}
+
+/*==== Header ====*/
+
+.navbar {
+	font-size: 1.5em;
+}
+
+.navbar select {
+	font-family: Ye-Olde-Oak, Arial;
+	font-size: 1.0em;
+}
+
+.navbar li {
+	font-family: Ye-Olde-Oak, Arial;
+	font-size: 1em;
+}
+
+.navbar a {
+    color: #eee6cd;
+}
+
+.navbar a:hover {
+    background-color: #eee6cd;
+	color: #c5ac8b;
+	text-shadow: 2px 1px 0 #5a4131;
+}
+
+#colorscheme select {
+	font-family: Ye-Olde-Oak, Arial;
+	font-size: 1.35em;
+	font-weight: none;
+	background-color: #5a4131;
+	color: #c5ac8b;
+	display: none;  /* Currently Removing it from Star_Wars page */
+	/* Make button rounder? Spice it up...and fix alignment */
+}
+
+/*==== Content ====*/
+
+#content {
+	color: #5a4131;
+	background: #eee6cd;
+	font-family: Oldsh, Helvetica;
+	font-size: 1em;
+}
+
+#interaction {
+	color: #5a4131;
+	background: #c5ac8b;
+	font-family: Oldsh, Helvetica;
+	font-size: 1em;
+}
+
