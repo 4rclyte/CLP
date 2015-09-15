@@ -1,0 +1,117 @@
+/*==== Fonts ====*/
+
+@font-face {
+    font-family: Starcraft;
+    src: url(../fonts/lan/Starcraft-Normal.ttf);
+}
+
+@font-face {
+    font-family: Commodore-64;
+    src: url(../fonts/lan/Commodore-64.ttf);
+}
+
+@font-face {
+    font-family: Commodore-Angled;
+    src: url(../fonts/lan/Commodore-Angled.ttf);
+}
+
+@font-face {
+    font-family: Commodore-Rounded;
+    src: url(../fonts/lan/Commodore-Rounded.ttf);
+}
+
+
+/*==== Colors ====
+Sharpedo: 
+lightest: #e6def6
+dominant: #395294
+middle: #5273bd
+darkest: #293952
+other: #aca4b4
+*/
+
+
+/*==== Global ====*/
+
+
+body/*, html             was having background color issues */
+ {
+	background: #293952;
+}
+
+a {
+	color: #e6def6;
+	font-weight: normal;
+}
+
+h1 {
+	font-family: Starcraft;
+	font-weight: normal;
+	font-size: 1.5em;
+	/* background-color: #de7329;  looks a bit off last time it was tried */
+}
+
+/* Need to apply a different style to */
+h2 {
+	font-family: Commodore-Angled;
+	font-size: 1.8em;
+	float: left;
+}
+
+hr {
+	height: 2px;
+	margin-top: -15px;
+}
+
+/*==== Header ====*/
+
+.navbar {
+	font-size: 1.5em;
+}
+
+.navbar select {
+	font-family: Starcraft, Arial;
+	font-size: 1.0em;
+}
+
+.navbar li {
+	font-family: Starcraft, Arial;
+	font-size: 1em;
+}
+
+.navbar a {
+    color: #e6def6;
+}
+
+.navbar a:hover {
+    background-color: #293952;
+	color: #293952;
+	text-shadow: 2px 1px 0 #e6def6;
+}
+
+#colorscheme select {
+	font-family: Starcraft, Arial;
+	font-size: 1.35em;
+	font-weight: none;
+	background-color: #395294;
+	color: #c5ac8b;
+	display: none;  /* Currently Removing it from Star_Wars page */
+	/* Make button rounder? Spice it up...and fix alignment */
+}
+
+/*==== Content ====*/
+
+#content {
+	color: #293952;
+	background: #e6def6;
+	font-family: Commodore-Rounded, Helvetica;
+	font-size: 1em;
+}
+
+#interaction {
+	color: #293952;
+	background: #aca4b4;
+	font-family: Commodore-Rounded, Helvetica;
+	font-size: 1em;
+}
+

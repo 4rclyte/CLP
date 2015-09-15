@@ -30,3 +30,11 @@ Star Wars ---> Date fluctuates moreso than the D&D event so it would use the Cal
 	       click something for Yes you can make it, click other for no you can't. Add totals to see what day works
                best.
 
+				<p>What happened last time?</p>
+				<p>Who did what?</p>
+				<p>Interesting new character ideas</p>
+				<p>Who is bringing what junk food?</p>
+				<p>Eventually add a PHP forum</p>
+				<p>All threads listed by last posted on Index</p>
+				<p>Latest thread for each section on its own page</p>
+

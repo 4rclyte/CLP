@@ -2,25 +2,29 @@
 
 @font-face {
     font-family: Lobster;
-    src: url(../fonts/lobster-regular.ttf);
+    src: url(../fonts/index/lobster-regular.ttf);
 }
 
 @font-face {
     font-family: Crete;
-    src: url(../fonts/crete-round-regular.ttf);
+    src: url(../fonts/index/crete-round-regular.ttf);
 }
 
 @font-face {
 	font-family: Coda;
-    src: url(../fonts/coda-regular.ttf);	
+    src: url(../fonts/index/coda-regular.ttf);	
 }
 
 @font-face {
 	font-family: IndieFlower;
-    src: url(../fonts/indie-flower.ttf);	
+    src: url(../fonts/index/indie-flower.ttf);	
 }
 
 /*==== Global ====*/
+
+@viewport {
+	width: auto;
+}
 
 html {
   box-sizing: border-box;
@@ -30,79 +34,145 @@ html {
   box-sizing: inherit;
 }
 
-body,
-html {
+body/*, html             was having background color issues */
+ {
 	margin: 0;
     padding: 0;
-	background: #000;
+	background: #392939;
 }
 
 #page {
     width: 1024px;
     margin: 0 auto;
-    background: #73707c;
+    background: transparent;
+}
+
+a {
+	text-decoration: none;
+	color: #dedede;
+}
+
+a:visited {
+
+	font-style: none;
+}
+
+a:hover {
+	font-style: none;
+}
+
+a:after {
+	font-style: none;
+}
+
+h1 {
+	font-family: Lobster;
+	font-size: 2.0em;
+	border-radius: 5px;
+}
+
+h2 {
+	
+}
+
+hr {
+	/*margin-top: -20px; */
+	border: 0; 
+	height: 1px; 
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
 /*==== Header ====*/
 
-#navbar {
+.navbar {
 	font-weight: bold;
 	font-size: 1.5em;
-	padding: 0px 15px;
-	background-color: #000;
+	padding-left: 15px; 
+	background-color: #transparent;
 }
 
-#navbar ul {
+.navbar select {
+	padding: 15px 0 6px 2%;
+	font-family: IndieFlower;
+	font-size: 1.0em;
+	font-weight: bold;
+	padding: 0;
+	margin: 0;
+}
+
+.navbar ul {
     padding: 15px 0 0 0;
     margin: 5px 5px;
     list-style-type: none;
+	float: left;
 }
 
-#navbar li {
-    display: inline-table;
+.navbar li {
+    display: inline;
+	/*  Outline for the links in Navbar, not sure if they look good or not
 	border-top: 5px groove #111;
 	border-left: 1px solid #444;
 	border-right: 5px groove #111;
 	border-bottom: none;
+	*/
 	font-family: IndieFlower, Arial;
-	text-shadow: 2px 1px 0 blue;
+	font-size: 1em;
 }
 
-#navbar a {
+.navbar a {
     text-decoration: none;
     color: #dedede;
-    background-color: #39239;
 }
 
-#navbar a:hover {
+.navbar a:hover {
     background-color: white;
-	color: #39239;
+	border-radius: 5px;
+	color: #392939;
+	text-shadow: 2px 1px 0 gray;
 }
 
-#login {
+/* Right side of Header area */
+#colorscheme {
+	margin-top: 16px;
+	margin-right: 15px;
 	float: right;
-	/*background-color: 39239;*/
+	margin-bottom: none;
+}
+
+#colorscheme select {
+	font-family: IndieFlower, Arial;
+	font-size: 1.35em;
+	font-weight: bold;
+	border: none;
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    text-indent: 1px;
+    text-overflow: '';
 }
 
 /*==== Content ====*/
 
 #content {
 	float: left;
-	width: 75%;
-	color: #39239;
+	width: 60%;
+	color: #392939;
 	background-color: #dedede;
 	font-family: Crete, Helvetica;
+	font-size: 1em;
 	padding: 0px 15px;
-	border-radius: 7px 0 0 7px;
+	border-radius: 10px 0 0 10px;
 }
 
 #interaction {
 	float: right;
-	width: 25%;
+	width: 40%;
+	color: #392939;
 	font-family: Lobster;
+	font-size: 1em;
 	background: #8b6283;
 	padding: 0 15px;
-	border-radius: 0 7px 7px 0;
+	border-radius: 0 10px 10px 0;
+	overflow: s-resize;
 }
 
 /*==== Footer ====*/
@@ -110,10 +180,141 @@ html {
 #footer {
 	clear: both;
 	font-family: Coda;
-	color: #333;
-	background: #39239;
+	color: rgba(2, 2, 2, .3);
+	padding-top: 2px;
+	background-color: transparent;
 	text-align: center;
-	position: absolute;
+	/*position: absolute;
 	bottom: 0;
-	left: 15px;
+	left: 15px;*/
 }
+
+/**************** Responsiveness ****************/
+/* Remove Navbar Dropdown Menu from full resolution version */
+@media screen and (min-width: 1041px) {
+	
+	.navbar select {
+		display: none;
+	}
+} /* End Higher Resoulution Media Query */
+
+
+/* Low Res Desktop or Huge Tablet Specs */
+@media screen and (min-width: 791px) and (max-width: 1040px) {
+			
+	#page {
+		width: auto;
+		margin: 0 2% 0 2%;
+	}		
+	
+	.navbar select {
+		display: none;
+	}
+	
+	#colorscheme {
+		margin-right: 15px;
+	}
+	
+	#content {
+		width: 60%;
+		padding: 0 1.5%;
+		background: yellow;
+		display: block;
+	}
+	
+	#interaction {
+		width: 40%;
+		padding: 0 1.5%;
+	}
+	
+} /* End Low Rest Desktop / Huge Tablet Media Query */
+
+
+/* Layout - Tablet Size Changes - Content Stacks */
+@media screen and (min-width: 651px) and (max-width: 790px) {
+	
+	#page {
+		width: auto;
+		margin: 0 2% 0 2%;
+	}
+	
+	.navbar {
+		min-height: 8%;
+	}
+	
+	.navbar select {
+		margin-top: 10px;
+		margin-left: 10%;
+		margin-bottom: 0;
+		float: left;
+		border: 0;
+	}
+	
+	#colorscheme select {
+		margin-top: 10px;
+		margin-right: 10%;
+		margin-bottom: 0;
+		float: right;
+		border: 0;
+	}
+	
+	.navbar ul {
+		display: none;
+	}
+	
+	#content {
+		width: 100%;
+		background: blue;
+		display: block;
+		border-radius: 10px 10px 0 0;
+	}
+	
+	#interaction {
+		width: 100%;
+		border-radius: 0 0 10px 10px;
+	}
+
+} /* End Tablet Size Media Query */
+
+
+/* Layout - Phone Size Modifications - Content Still Stacks */
+@media screen and (min-width: 220px) and (max-width: 650px) {
+
+	#page {
+		width: auto;
+		margin: 0 2% 0 2%;
+	}
+	
+	.navbar ul {
+		display: none;
+	}
+	
+	.navbar select {
+		margin-top: 10px;
+		margin-left: 5%;
+		float: left;
+		border: 0;
+	}
+	
+	#colorscheme select {
+		margin: top: 10px
+		margin-right: 5%;
+		float: right;
+		border: 0;
+	}
+	
+	#content {
+		width: 100%;
+		padding: 1.5%;
+		background: purple;
+		border-radius: 10px 10px 0 0;
+	}
+	
+	#interaction {
+		width: 100%;
+		padding: 1.5%;
+		border-radius: 0 0 10px 10px;
+	}
+	
+} /* End Phone Size Media Query */
+
