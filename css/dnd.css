@@ -30,6 +30,11 @@
     src: url(../fonts/dnd/Blackcherry.ttf);	
 }
 
+@font-face {
+	font-family: KnightsQuest;
+    src: url(../fonts/dnd/KnightsQuest.ttf);	
+}
+
 /*==== Colors ====
 Vulpix
 	lightest: "#ffde94", 
@@ -111,7 +116,7 @@ hr {
 #content {
 	color: #5a3100;
 	background-color: #ffde94;
-	font-family: Crusades, Helvetica;
+	font-family: KnightsQuest, Crusades, Helvetica;
 	font-size: 1.0em;
 }
 
@@ -121,8 +126,8 @@ hr {
 
 #interaction {
 	color: #5a3100;
-	font-family: Crusades, Helvetica;
-	font-size: 1em;
+	font-family: KnightsQuest, Crusades, Helvetica;
+	font-size: 1.5em;
 	background: #de7329;
 }
 
