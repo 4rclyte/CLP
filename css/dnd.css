@@ -26,8 +26,8 @@
 }
 
 @font-face {
-	font-family: Blkchcry;
-    src: url(../fonts/dnd/BLKCHCRY.ttf);	
+	font-family: Blackcherry;
+    src: url(../fonts/dnd/Blackcherry.ttf);	
 }
 
 /*==== Colors ====
@@ -111,7 +111,7 @@ hr {
 #content {
 	color: #5a3100;
 	background-color: #ffde94;
-	font-family: Blkchcry, Helvetica;
+	font-family: Blackcherry, Helvetica;
 	font-size: 1.0em;
 }
 
@@ -121,7 +121,7 @@ hr {
 
 #interaction {
 	color: #5a3100;
-	font-family: Blkchcry, Helvetica;
+	font-family: Blackcherry, Helvetica;
 	font-size: 1em;
 	background: #de7329;
 }
