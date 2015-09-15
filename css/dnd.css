@@ -1,0 +1,128 @@
+/*==== Fonts ====*/
+
+@font-face {
+    font-family: CloisterBlack;
+    src: url(../fonts/dnd/CloisterBlack.ttf);
+}
+
+@font-face {
+    font-family: Crusades;
+    src: url(../fonts/dnd/Crusades.ttf);
+}
+
+@font-face {
+	font-family: Flesh-Wound;
+    src: url(../fonts/dnd/Flesh-Wound.ttf);	
+}
+
+@font-face {
+	font-family: Sketch-Gothic-School;
+    src: url(../fonts/dnd/Sketch-Gothic-School.ttf);	
+}
+
+@font-face {
+	font-family: Neverwinter;
+    src: url(../fonts/dnd/Neverwinter.otf);	
+}
+
+@font-face {
+	font-family: Blkchcry;
+    src: url(../fonts/dnd/BLKCHCRY.ttf);	
+}
+
+/*==== Colors ====
+Vulpix
+	lightest: "#ffde94", 
+	dominant: "#bd4a29", 
+	middle: "#de7329", 
+	darkest: "#5a3100" 
+*/
+
+/*==== Global ====*/
+
+
+body/*, html             was having background color issues */
+ {
+	background: #bd4a29;
+}
+
+a {
+	color: #ffde94;
+	font-weight: normal;
+}
+
+h1 {
+	font-family: Sketch-Gothic-School;
+	font-weight: normal;
+	font-size: 2.8em;
+	/* background-color: #de7329;  looks a bit off last time it was tried */
+}
+
+/* Need to apply a different style to */
+h2 {
+	font-family: Sketch-Gothic-School;
+	font-size: 2em;
+	float: left;
+}
+
+hr {
+	height: 2px;
+	color: #5a3100;
+	margin-top: -27px;
+}
+
+/*==== Header ====*/
+
+.navbar {
+	font-size: 1.5em;
+}
+
+.navbar select {
+	font-family: CloisterBlack;
+	font-size: 1.0em;
+}
+
+.navbar li {
+	font-family: CloisterBlack, Arial;
+	font-size: 1em;
+}
+
+.navbar a {
+    color: #ffde94;
+}
+
+.navbar a:hover {
+    background-color: #ffde94;
+	color: #bd4a29;
+	text-shadow: 2px 1px 0 black;
+}
+
+#colorscheme select {
+	font-family: CloisterBlack, Arial;
+	font-size: 1.35em;
+	font-weight: none;
+	background-color: #ffde94;
+	color: #5a3100;
+	/* Make button rounder? Spice it up...and fix alignment */
+}
+
+/*==== Content ====*/
+
+#content {
+	color: #5a3100;
+	background-color: #ffde94;
+	font-family: Blkchcry, Helvetica;
+	font-size: 1.0em;
+}
+
+#content p {
+	font-size: 1.5em;
+}
+
+#interaction {
+	color: #5a3100;
+	font-family: Blkchcry, Helvetica;
+	font-size: 1em;
+	background: #de7329;
+}
+
