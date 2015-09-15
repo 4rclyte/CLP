@@ -2,22 +2,22 @@
 
 @font-face {
     font-family: Lobster;
-    src: url(../fonts/lobster-regular.ttf);
+    src: url(../fonts/index/lobster-regular.ttf);
 }
 
 @font-face {
     font-family: Crete;
-    src: url(../fonts/crete-round-regular.ttf);
+    src: url(../fonts/index/crete-round-regular.ttf);
 }
 
 @font-face {
 	font-family: Coda;
-    src: url(../fonts/coda-regular.ttf);	
+    src: url(../fonts/index/coda-regular.ttf);	
 }
 
 @font-face {
 	font-family: IndieFlower;
-    src: url(../fonts/indie-flower.ttf);	
+    src: url(../fonts/index/indie-flower.ttf);	
 }
 
 /*==== Global ====*/
