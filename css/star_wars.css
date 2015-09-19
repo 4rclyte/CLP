@@ -34,50 +34,48 @@ Black, White and Yellow
 /*==== Global ====*/
 
 
-body/*, html             was having background color issues */
+body
  {
-	background: #000;
+	background-image: url("../img/alex_(artist)buildingoriginalscenic.jpg");
+	background-size: cover;
+	background-attachment: fixed;
+	background-color: #000;
 }
 
 a {
-	color: blue;
+	color: orange;
 	font-weight: normal;
 }
 
 h1 {
 	font-family: Starjedi;
 	font-weight: normal;
-	font-size: 2.8em;
+	font-size: 2.2em;
 	/* background-color: #de7329;  looks a bit off last time it was tried */
 }
 
 /* Need to apply a different style to */
 h2 {
 	font-family: Starjhol;
-	font-size: 1.8em;
+	font-size: 1.6em;
 	float: left;
 }
 
 hr {
 	height: 2px;
 	margin-top: -27px;
-	background-image: linear-gradient(to right, rgba(190, 190, 190, .4), rgba(160, 160, 160, 0.85), rgba(40, 40, 160, .9), rgba(50, 50, 150, 0));
+	background-image: linear-gradient(to right, rgba(190, 190, 190, .3), rgba(160, 160, 160, 0.85), rgba(40, 40, 160, .9), rgba(50, 50, 150, 0));
 }
 
 /*==== Header ====*/
 
-.navbar {
-	font-size: 1.5em;
-}
-
-.navbar select {
-	font-family: SF-Distant-Galaxy-AltOutline, Arial;
-	font-size: 1.0em;
+.navbar ul {
+	margin-left: 6%;
 }
 
 .navbar li {
 	font-family: SF-Distant-Galaxy-AltOutline, Arial;
-	font-size: 1em;
+	font-size: 1.7em;
 }
 
 .navbar a {
@@ -85,12 +83,12 @@ hr {
 }
 
 .navbar a:hover {
-    background-color: white;
-	color: blue;
-	text-shadow: 2px 1px 0 lightblue;
+    background-color: transparent;
+	color: yellow;
+	text-shadow: 2px 1px 0 red;
 }
 
-#colorscheme select {
+#colorscheme {
 	font-family: SF-Distant-Galaxy-AltOutline, Arial;
 	font-size: 1.35em;
 	font-weight: none;
@@ -104,15 +102,126 @@ hr {
 
 #content {
 	color: black;
-	background: white;
+	background: rgba(100, 160, 180, 0.75);
 	font-family: Starjmono, Helvetica;
 	font-size: 1em;
 }
 
 #interaction {
 	color: black;
-	background: red;
+	background: rgba(180, 30, 30, 0.75);
 	font-family: Starjedi, Helvetica;
 	font-size: 1em;
 }
+
+.question {
+	color: yellow;
+}
+
+.red {
+	color: red;
+}
+
+/**************** Responsiveness ****************/
+
+/* Low Res Desktop or Huge Tablet Specs */
+@media screen and (min-width: 791px) and (max-width: 1040px) {
+			
+	#page {
+		margin: 0 2% 0 2%;
+	}		
+	
+	#colorscheme {
+		margin-right: 4%;
+	}
+	
+	#content {
+		width: 70%;
+		padding: 0 1.5%;
+		display: block;
+	}
+	
+	#interaction {
+		width: 30%;
+		padding: 0 1.5%;
+		font-size: 1.35em;
+	}
+	
+} /* End Low Rest Desktop / Huge Tablet Media Query */
+
+
+/* Layout - Tablet Size Changes - Content Stacks */
+@media screen and (min-width: 651px) and (max-width: 790px) {
+	
+	h1 {
+		font-size: 1.7em;
+	}	
+	
+	#page {
+		margin: 0 2% 0 2%;
+	}
+	
+	#colorscheme {
+		margin: 3% 3% 0 0;
+		font-size: 1.15em;
+	}
+
+	.navbar ul {
+
+	}
+	
+	.navbar li {
+		font-size: 1.5rem;
+	}
+	
+	#content {
+
+	}
+	
+	#interaction {
+		font-size: 1.25em;
+	}
+
+} /* End Tablet Size Media Query */
+
+
+/* Layout - Phone Size Modifications - Content Still Stacks */
+@media screen and (min-width: 220px) and (max-width: 650px) {
+
+	h1 {
+		font-size: 2em;
+	}
+
+	#page {
+		margin: 0 2% 0 2%;
+	}
+	
+	.navbar ul {
+		display: none;
+	}
+	
+	#navMenu {
+		color: yellow;
+		background: rgba(100, 160, 180, 0.50);
+		margin: 2% 0 0 15%;	
+		font-family: SF-Distant-Galaxy-AltOutline, Arial;
+		font-size: 1.75em;
+		font-weight: bold;
+	}
+	
+	#colorscheme {
+		margin: 2% 15% 0 0;
+		font-size: 1.35em;
+	}
+	
+	#content {
+
+	}
+	
+	#interaction {
+
+	}
+	
+} /* End Phone Size Media Query */
+
 

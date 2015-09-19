@@ -24,7 +24,7 @@ var layoutColors = {
  
 //Replace unordered list of links with a dropdown menu on small screen sizes
 //Create a select and append to #navbar
-var $select = $("<select></select>");
+var $select = $("<select id='navMenu'></select>");
 $(".navbar").append($select);
 
 //Go through each of the navbar links
@@ -36,6 +36,7 @@ $(".navbar a").each(function(){
   //Deal with selected options depending on current page
   if($anchor.parent().hasClass("selected")) {
     $option.prop("selected", true);
+	$option.css("display", "none");
   }
   //Option's value is set to the href value
   $option.val($anchor.attr("href"));
@@ -50,12 +51,12 @@ $select.change(function(){
   //Go to select's location
   window.location = $select.val();
 });
-
+//===========END NAV MENU REPLACEMENT ========================================
 
 
 //Change colorScheme via select menu ////////////////////////////////////////////////////////////////
 //Target the colorscheme selection menu for the change listener
-$( "#colorscheme select" ).change(function () {
+$( "#colorscheme" ).change(function () {
 	var str = "<p>Changed CSS layout to: ";  //optional testing text
 	var selected = this.value;
 	
@@ -85,7 +86,7 @@ function setLayoutColors ( poke ) {
 	
 	$("body").css("background-color", newColor.dominant );
 	$("a").css("color", newColor.lightest );
-	$("#content, select").css({ "background-color": newColor.lightest, "color": newColor.darkest });
+	$("#content, select, #navMenu").css({ "background-color": newColor.lightest, "color": newColor.darkest });
 	$("#interaction").css("background-color", newColor.middle ).css("color", newColor.darkest );  
 	$("hr").css("color", newColor.darkest );
 	//$("li > a:hover").css("color", newColor.dominant ); //finding it hard to select pseudo class a:hover

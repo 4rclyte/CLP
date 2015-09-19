@@ -48,18 +48,20 @@ Vulpix
 
 body/*, html             was having background color issues */
  {
-	background: #bd4a29;
+    background-image: url("../img/ds2lastgiant.jpg");
+    background-color: #bd4a29;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
 a {
-	color: #ffde94;
-	font-weight: normal;
+	color: #de7329;
 }
 
 h1 {
 	font-family: Sketch-Gothic-School;
 	font-weight: normal;
-	font-size: 2.8em;
+	font-size: 2.5em;
 	/* background-color: #de7329;  looks a bit off last time it was tried */
 }
 
@@ -73,23 +75,23 @@ h2 {
 hr {
 	height: 2px;
 	color: #5a3100;
-	margin-top: -27px;
+	margin-top: -25px;
 }
 
 /*==== Header ====*/
 
 .navbar {
-	font-size: 1.5em;
+	/*font-size: 1.5em;*/
 }
 
-.navbar select {
+/*.navbar select {
 	font-family: CloisterBlack;
 	font-size: 1.0em;
-}
+}*/
 
 .navbar li {
 	font-family: CloisterBlack, Arial;
-	font-size: 1em;
+	font-size: 1.8rem;
 }
 
 .navbar a {
@@ -102,9 +104,9 @@ hr {
 	text-shadow: 2px 1px 0 black;
 }
 
-#colorscheme select {
+#colorscheme {
 	font-family: CloisterBlack, Arial;
-	font-size: 1.35em;
+	font-size: 1.45em;
 	font-weight: none;
 	background-color: #ffde94;
 	color: #5a3100;
@@ -115,9 +117,9 @@ hr {
 
 #content {
 	color: #5a3100;
-	background-color: #ffde94;
+	background: rgba(255, 222, 148, 100);
 	font-family: KnightsQuest, Crusades, Helvetica;
-	font-size: 1.0em;
+	/*font-size: 1.0em;*/
 }
 
 #content p {
@@ -125,9 +127,133 @@ hr {
 }
 
 #interaction {
-	color: #5a3100;
+	color: #ffde94;
 	font-family: KnightsQuest, Crusades, Helvetica;
 	font-size: 1.5em;
-	background: #de7329;
+	background: rgba(222, 115, 41, .45);
 }
+
+/**************** Responsiveness ****************/
+
+/* Low Res Desktop or Huge Tablet Specs */
+@media screen and (min-width: 791px) and (max-width: 1040px) {
+			
+	#page {
+		margin: 0 2% 0 2%;
+	}		
+	
+	#navMenu {
+
+	}
+	
+	#colorscheme {
+		margin-right: 4%;
+	}
+	
+	#content {
+		width: 70%;
+		padding: 0 1.5%;
+		/*background: yellow;*/
+		display: block;
+	}
+	
+	#interaction {
+		width: 30%;
+		padding: 0 1.5%;
+		font-size: 1.35em;
+	}
+	
+} /* End Low Rest Desktop / Huge Tablet Media Query */
+
+
+/* Layout - Tablet Size Changes - Content Stacks */
+@media screen and (min-width: 651px) and (max-width: 790px) {
+	
+	h1 {
+		font-size: 1.8em;
+	}	
+	
+	#page {
+		margin: 0 2% 0 2%;
+	}
+
+	/*
+	#navMenu {
+		background: #dedede;
+		display: inline;
+		margin: 2% 0 0 15%;
+		border: none;
+		float: left;
+		font-size: 1.45em;
+		font-family: IndieFlower, Arial;
+		
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-indent: 1px;
+		text-overflow: '';
+	}*/
+	
+	#colorscheme {
+		margin: 3% 3% 0 0;
+		font-size: 1.25em;
+	}
+	
+	/*
+	.navbar ul {
+		display: none;
+	}*/
+	
+	.navbar li {
+		font-size: 1.45rem;
+	}
+	
+	#content {
+		border-radius: 10px 0 0 10px;
+	}
+	
+	#interaction {
+		border-radius: 0 10px 10px 0;
+		font-size: 1.25em;
+	}
+
+} /* End Tablet Size Media Query */
+
+
+/* Layout - Phone Size Modifications - Content Still Stacks */
+@media screen and (min-width: 220px) and (max-width: 650px) {
+
+	h1 {
+		font-size: 2em;
+	}
+
+	#page {
+		margin: 0 2% 0 2%;
+	}
+	
+	.navbar ul {
+		display: none;
+	}
+	
+	#navMenu {
+		background: #ffde94;
+		margin: 2% 0 0 15%;
+		font-size: 1.35em;
+		font-family: CloisterBlack, Arial;
+	}
+	
+	#colorscheme {
+		margin: 2% 15% 0 0;
+		font-size: 1.35em;
+	}
+	
+	#content {
+
+	}
+	
+	#interaction {
+
+	}
+	
+} /* End Phone Size Media Query */
+
 
