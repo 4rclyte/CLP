@@ -68,11 +68,13 @@ a:after {
 h1 {
 	font-family: Lobster;
 	font-size: 2.0em;
-	border-radius: 5px;
+	text-align: center;
 }
 
 h2 {
-	
+	font-family: Lobster;
+	font-size: 1.5em;
+	text-align: left;
 }
 
 hr {
@@ -85,23 +87,26 @@ hr {
 /*==== Header ====*/
 
 .navbar {
+	width: auto;
 	font-weight: bold;
-	font-size: 1.5em;
-	padding-left: 15px; 
 	background-color: #transparent;
 }
 
-.navbar select {
+#navMenu {
+	display: none;
+}
+
+/*.navbar select {
 	padding: 15px 0 6px 2%;
 	font-family: IndieFlower;
 	font-size: 1.0em;
 	font-weight: bold;
 	padding: 0;
 	margin: 0;
-}
+}*/
 
 .navbar ul {
-    padding: 15px 0 0 0;
+    padding: 15px 0 0 15px;
     margin: 5px 5px;
     list-style-type: none;
 	float: left;
@@ -109,14 +114,14 @@ hr {
 
 .navbar li {
     display: inline;
+	font-family: IndieFlower, Arial;
+	font-size: 1.5em; 
 	/*  Outline for the links in Navbar, not sure if they look good or not
 	border-top: 5px groove #111;
 	border-left: 1px solid #444;
 	border-right: 5px groove #111;
 	border-bottom: none;
 	*/
-	font-family: IndieFlower, Arial;
-	font-size: 1em;
 }
 
 .navbar a {
@@ -133,22 +138,23 @@ hr {
 
 /* Right side of Header area */
 #colorscheme {
-	margin-top: 16px;
-	margin-right: 15px;
-	float: right;
-	margin-bottom: none;
-}
-
-#colorscheme select {
-	font-family: IndieFlower, Arial;
-	font-size: 1.35em;
-	font-weight: bold;
+	background: #dedede;
+    margin: 2% 2% 0 0;
 	border: none;
+	float: right;
+	font-size: 1.45em;
+	font-family: IndieFlower, Arial;
+	border-radius: 7px;
+	
 	-webkit-appearance: none;
     -moz-appearance: none;
     text-indent: 1px;
     text-overflow: '';
 }
+
+/*#colorscheme select {
+
+}*/
 
 /*==== Content ====*/
 
@@ -190,35 +196,23 @@ hr {
 }
 
 /**************** Responsiveness ****************/
-/* Remove Navbar Dropdown Menu from full resolution version */
-@media screen and (min-width: 1041px) {
-	
-	.navbar select {
-		display: none;
-	}
-} /* End Higher Resoulution Media Query */
-
 
 /* Low Res Desktop or Huge Tablet Specs */
-@media screen and (min-width: 791px) and (max-width: 1040px) {
+@media screen and (min-width: 681px) and (max-width: 1040px) {
 			
 	#page {
 		width: auto;
 		margin: 0 2% 0 2%;
 	}		
 	
-	.navbar select {
-		display: none;
-	}
-	
 	#colorscheme {
-		margin-right: 15px;
+		margin-right: 4%;
 	}
 	
 	#content {
 		width: 60%;
 		padding: 0 1.5%;
-		background: yellow;
+		/*background: yellow;*/
 		display: block;
 	}
 	
@@ -237,48 +231,68 @@ hr {
 		width: auto;
 		margin: 0 2% 0 2%;
 	}
-	
-	.navbar {
-		min-height: 8%;
-	}
-	
-	.navbar select {
-		margin-top: 10px;
-		margin-left: 10%;
-		margin-bottom: 0;
+
+	/*
+	#navMenu {
+		background: #dedede;
+		display: inline;
+		margin: 2% 0 0 15%;
+		border: none;
 		float: left;
-		border: 0;
-	}
-	
-	#colorscheme select {
-		margin-top: 10px;
-		margin-right: 10%;
-		margin-bottom: 0;
+		font-size: 1.45em;
+		font-family: IndieFlower, Arial;
+		
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-indent: 1px;
+		text-overflow: '';
+	}*/
+
+	#colorscheme {
+		display: inline;
+		margin: 3% 3% 0 0;
+		border: none;
 		float: right;
-		border: 0;
+		font-size: 1.20em;
+		
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-indent: 1px;
+		text-overflow: '';
 	}
 	
+	/*
 	.navbar ul {
 		display: none;
+	}*/
+
+	.navbar li {
+		font-size: 1.40rem;
 	}
 	
 	#content {
-		width: 100%;
-		background: blue;
-		display: block;
-		border-radius: 10px 10px 0 0;
+		width: 65%;
+		/*background: blue;*/
+		float: left;
+		border-radius: 10px 0 0 10px;
 	}
 	
 	#interaction {
-		width: 100%;
-		border-radius: 0 0 10px 10px;
+		float: right;
+		width: 35%;
+		border-radius: 0 10px 10px 0;
 	}
+	
 
 } /* End Tablet Size Media Query */
 
 
 /* Layout - Phone Size Modifications - Content Still Stacks */
 @media screen and (min-width: 220px) and (max-width: 650px) {
+
+	h1 {
+		font-size: 1.45rem;
+	}
 
 	#page {
 		width: auto;
@@ -289,30 +303,46 @@ hr {
 		display: none;
 	}
 	
-	.navbar select {
-		margin-top: 10px;
-		margin-left: 5%;
+	#navMenu {
+		background: #dedede;
+		display: inline;
+		margin: 2% 0 0 15%;
+		border: none;
 		float: left;
-		border: 0;
+		font-size: 1.35em;
+		font-family: IndieFlower, Arial;
+		border-radius: 5px 5px 0 0;
+		
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-indent: 1px;
+		text-overflow: '';
 	}
 	
-	#colorscheme select {
-		margin: top: 10px
-		margin-right: 5%;
+	#colorscheme {
+		display: inline;
+		margin: 2% 15% 0 0;
+		border: none;
 		float: right;
-		border: 0;
+		font-size: 1.35em;
+		border-radius: 5px 5px 0 0;
+		
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-indent: 1px;
+		text-overflow: '';
 	}
 	
 	#content {
 		width: 100%;
-		padding: 1.5%;
-		background: purple;
+		padding: 0 3% 3% 3%;
+		/*background: purple;*/
 		border-radius: 10px 10px 0 0;
 	}
 	
 	#interaction {
 		width: 100%;
-		padding: 1.5%;
+		padding: 1% 3% 1% 3%;
 		border-radius: 0 0 10px 10px;
 	}
 	

@@ -23,10 +23,13 @@ darkest: #5a4131
 
 /*==== Global ====*/
 
-
-body/*, html             was having background color issues */
- {
+body {
 	background: #5a4131;
+    background-image: url("../img/table-top-background.jpg");
+
+	background-attachment: fixed;
+	background-size: cover;
+
 }
 
 a {
@@ -36,14 +39,21 @@ a {
 h1 {
 	font-family: Ye-Olde-Oak;
 	font-weight: normal;
-	font-size: 2.8em;
-	/* background-color: #de7329;  looks a bit off last time it was tried */
+	/*
+	color: #5a4131;
+	background-color: #c5ac8b;
+	border-radius: 8px;
+	margin-right: 2%;
+	margin-left: 2%;
+	margin-bottom: 0;
+	padding-top: 1%;
+	padding-bottom: 1%;
+		was testing h1 background colors */
 }
 
 /* Need to apply a different style to */
 h2 {
 	font-family: Oldsh;
-	font-size: 1.8em;
 	float: left;
 }
 
@@ -55,17 +65,14 @@ hr {
 /*==== Header ====*/
 
 .navbar {
-	font-size: 1.5em;
-}
-
-.navbar select {
 	font-family: Ye-Olde-Oak, Arial;
-	font-size: 1.0em;
+	font-size: 1.35em;
+
 }
 
 .navbar li {
 	font-family: Ye-Olde-Oak, Arial;
-	font-size: 1em;
+	font-weight: normal;
 }
 
 .navbar a {
@@ -78,13 +85,12 @@ hr {
 	text-shadow: 2px 1px 0 #5a4131;
 }
 
-#colorscheme select {
+#colorscheme {
 	font-family: Ye-Olde-Oak, Arial;
 	font-size: 1.35em;
 	font-weight: none;
-	background-color: #5a4131;
-	color: #c5ac8b;
-	display: none;  /* Currently Removing it from Star_Wars page */
+	background-color: transparent;
+	color: #eee6cd;
 	/* Make button rounder? Spice it up...and fix alignment */
 }
 
@@ -104,3 +110,104 @@ hr {
 	font-size: 1em;
 }
 
+
+/**************** Responsiveness ****************/
+
+/* Low Res Desktop or Huge Tablet Specs */
+@media screen and (min-width: 791px) and (max-width: 1040px) {
+			
+	#page {
+		margin: 0 2% 0 2%;
+	}		
+	
+	#colorscheme {
+		margin-right: 4%;
+	}
+	
+	#content {
+		width: 70%;
+		padding: 0 1.5%;
+		display: block;
+	}
+	
+	#interaction {
+		width: 30%;
+		padding: 0 1.5%;
+		font-size: 1.35em;
+	}
+	
+} /* End Low Rest Desktop / Huge Tablet Media Query */
+
+
+/* Layout - Tablet Size Changes - Content Stacks */
+@media screen and (min-width: 651px) and (max-width: 790px) {
+	
+	h1 {
+
+	}	
+	
+	#page {
+
+	}
+	
+	#colorscheme {
+		font-size: 1.5rem;
+	}
+	
+
+	.navbar ul {
+
+	}
+	
+	.navbar li {
+
+	}
+	
+	#content {
+
+	}
+	
+	#interaction {
+
+	}
+
+} /* End Tablet Size Media Query */
+
+
+/* Layout - Phone Size Modifications - Content Still Stacks */
+@media screen and (min-width: 220px) and (max-width: 650px) {
+
+	h1 {
+		margin-right: 0;
+	}
+
+	#page {
+
+	}
+	
+	.navbar ul {
+		display: none;
+	}
+	
+	#navMenu {
+		color: #5a4131;
+		background: #eee6cd;
+		font-family: Ye-Olde-Oak, Arial;
+		font-size: 1.5rem;
+	}
+	
+	#colorscheme {
+		color: #5a4131;
+		background: #eee6cd;
+		font-size: 1.5rem;
+	}
+	
+	#content {
+
+	}
+	
+	#interaction {
+
+	}
+	
+} /* End Phone Size Media Query */

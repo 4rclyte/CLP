@@ -1,73 +1,55 @@
 /*==== Fonts ====*/
 
 @font-face {
-    font-family: Starcraft;
-    src: url(../fonts/lan/Starcraft-Normal.ttf);
+    font-family: Exocet;
+    src: url(../fonts/wan/exocet.ttf);
 }
 
 @font-face {
-    font-family: Commodore-64;
-    src: url(../fonts/lan/Commodore-64.ttf);
+    font-family: Diablo-H;
+    src: url(../fonts/wan/diablo_h.ttf);
 }
-
-@font-face {
-    font-family: Commodore-Angled;
-    src: url(../fonts/lan/Commodore-Angled.ttf);
-}
-
-@font-face {
-    font-family: Commodore-Rounded;
-    src: url(../fonts/lan/Commodore-Rounded.ttf);
-}
-
-@font-face {
-	font-family: Coda;
-    src: url(../fonts/index/coda-regular.ttf);	
-}
-
 
 /*==== Colors ====
-Sharpedo: 
-lightest: #e6def6
-dominant: #395294
-middle: #5273bd
-darkest: #293952
-other: #aca4b4
-*/
+Houndour
+	lightest: #ffffff
+	otherlight: a49cac
+	dominant: #292931 
+	middle: #414a52
+	darkest: #080808 
+	red: #ac7352
+******************/
+
 
 
 /*==== Global ====*/
 
 
-body/*, html             was having background color issues */
+body
  {
 	background: #293952;
-	background-image: url("../img/20131102_211959.jpg");
+	background-image: url("../img/diablo-bg.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 }
 
-#page {
-	background: #293952;
-	border-radius: 10px;
-}
-
 a {
-	color: #e6def6;
+	color: white;
 	font-weight: normal;
 }
 
 h1 {
-	font-family: Starcraft;
+	font-family: Diablo-H;
 	font-weight: normal;
 	font-size: 1.35em;
 	text-align: center;
+	text-shadow: 1px 1px 1 #ac7352;
 	/* background-color: #de7329;  looks a bit off last time it was tried */
 }
 
 /* Need to apply a different style to */
 h2 {
-	font-family: Coda;
+	font-family: Exocet;
 	font-size: 1.2em;
 	float: left;
 }
@@ -75,31 +57,28 @@ h2 {
 hr {
 	height: 2px;
 	margin-top: -15px;
+	background-image: linear-gradient(to right, rgba(0, 0, 0, .05), rgba(172, 115, 82, 0.75), rgba(0, 0, 0, .05));
 }
 
 /*==== Header ====*/
 
-#navMenu {
-	font-family: Starcraft, Arial;
-	font-size: 1.3em;
-}
 
 .navbar li {
-	font-family: Starcraft, Arial;
-	font-size: 1.3em;
-	background-color: #293952;
+	font-family: Diablo-H, Arial;
+	font-weight: normal;
+	font-size: 1.5em;
 }
 
-.navbar a {
-    color: #e6def6;
+.navbar ul li a{
+	color: #080808;
+	text-shadow: 3px 1px 0 #ac7352;
 }
 
 .navbar a:hover {
-    background-color: #293952;
-	color: #293952;
-	text-shadow: 2px 1px 0 #e6def6;
+    background-color: transparent;
+	color: #ac7352;
+	text-shadow: 3px 1px 0 #080808;
 }
-
 
 #colorscheme {
 	font-family: Starcraft, Arial;
@@ -113,16 +92,20 @@ hr {
 /*==== Content ====*/
 
 #content {
-	color: #293952;
-	background: #e6def6;
-	font-family: Coda, Helvetica;
+	color: #ac7352;
+	background: rgba(8, 8, 8, 0.5);
+	font-family: Exocet, Helvetica;
 	font-size: 1em;
 }
 
 #interaction {
-	color: #293952;
-	background: #aca4b4;
-	font-family: Coda, Helvetica;
+	color: #080808;
+	background: rgba(172, 115, 82, 0.7);
+	font-family: Exocet, Helvetica;
+}
+
+#interaction hr {
+	background-image: linear-gradient(to right, rgba(172, 115, 82, 0.25), rgba(0, 0, 0, 0.95), rgba(172, 115, 82, 0.25));
 }
 
 /**************** Responsiveness ****************/
@@ -173,7 +156,7 @@ hr {
 	}
 	
 	.navbar li {
-
+		font-size: 1.4rem;
 	}
 	
 	#content {
@@ -200,13 +183,15 @@ hr {
 	
 	.navbar ul {
 		display: none;
-	}
+	}	
 	
 	#navMenu {
-		color: #e6def6;
-		background: transparent;
-		font-family: Starcraft, Arial;
-		font-size: 1.5rem;
+		background: rgba(8, 8, 8, 0.5);
+		color: #080808;
+		text-shadow: 2px 1px 0 orange;
+		font-family: Exocet, Arial;
+		font-size: 1.6em;
+		border: 0;
 	}
 	
 	#colorscheme {
