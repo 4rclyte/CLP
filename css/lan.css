@@ -42,7 +42,7 @@ other: #aca4b4
 body/*, html             was having background color issues */
  {
 	background: #293952;
-	background-image: url("../img/20131102_211959.jpg");
+	background-image: url("../img/basement-construction.jpg");
 	background-size: cover;
 	background-attachment: fixed;
 }
