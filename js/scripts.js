@@ -24,7 +24,7 @@ var layoutColors = {
  
 //Replace unordered list of links with a dropdown menu on small screen sizes
 //Create a select and append to #navbar
-var $select = $("<select id='navMenu'></select>");
+var $select = $("<select id='navMenu'><option>Nav</option></select>");
 $(".navbar").append($select);
 
 //Go through each of the navbar links
