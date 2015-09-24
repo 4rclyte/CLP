@@ -36,7 +36,7 @@ $(".navbar a").each(function(){
   //Deal with selected options depending on current page
   if($anchor.parent().hasClass("selected")) {
     $option.prop("selected", true);
-	$option.css("display", "none");
+	//$option.css("display", "none");
   }
   //Option's value is set to the href value
   $option.val($anchor.attr("href"));
