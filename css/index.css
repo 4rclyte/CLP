@@ -1,0 +1,333 @@
+/*==== Fonts ====*/
+
+@font-face {
+    font-family: Lobster;
+    src: url(../fonts/index/lobster-regular.ttf);
+}
+
+@font-face {
+    font-family: Crete;
+    src: url(../fonts/index/crete-round-regular.ttf);
+}
+
+@font-face {
+	font-family: Coda;
+    src: url(../fonts/index/coda-regular.ttf);	
+}
+
+@font-face {
+	font-family: IndieFlower;
+    src: url(../fonts/index/indie-flower.ttf);	
+}
+
+
+/*==== Global ====*/
+
+body
+ {
+	background-image: url("../img/159001_kibunya_39_scenic_sky.jpg");
+    background-color: #392939;;
+	background-attachment: fixed;
+	background-size: cover;
+}
+
+p {
+	font-family: Coda;
+}
+
+a {
+	color: #dedede;
+}
+
+a:hover {
+	color: #fefefe;
+}
+
+h1 {
+	font-family: Lobster;
+	font-size: 2.0em;
+	text-align: center;
+}
+
+h2 {
+	font-family: Lobster;
+	font-size: 1.5em;
+	text-align: left;
+}
+
+hr {
+	margin-top: -.07rem;
+	border: 0; 
+	height: 1px; 
+	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+ol {
+	list-style: square;
+}
+
+.has-dropdown ul {
+	display:none;
+}
+.has-dropdown:hover ul {
+	display:block;
+}
+
+#pinky {
+	color: #bd94b4;
+}
+
+/*==== Navigation ====*/
+
+.top-bar-section ul li a {
+	font-family: Coda;
+	font-size: 1.1em;
+	/*color: #dedede;*/
+}
+
+.top-bar-section ul li a:hover {
+	border-radius: 5px;
+	color: #666;
+	text-shadow: 1px 1px 0 #444;
+}
+
+#otherRealms li a {
+	font-family: Coda;
+	font-size: 1.1em;
+}
+
+/*==== Content ====*/
+
+.button-group.even-3 li > button, .button-group.even-3 li .button {
+	font-family: Coda;
+}
+
+#buttonInfo li a {
+	background: #8b6283;
+	color: #dedede;
+}
+
+#buttonInfo li a:hover {
+	background: #222;
+	color: #dedede;
+}
+
+#contentArea {
+	color: #392939;
+	background-color: #dedede;
+	font-family: Crete, Helvetica;
+	font-size: 1em;
+	padding: 1.5%;
+	border-radius: 0 0 5px 5px;
+}
+
+#interaction {
+	color: #392939;
+	font-family: Lobster;
+	font-size: 1em;
+	background: #8b6283;
+	padding: 1.5%;
+	overflow: s-resize;
+	border: none;
+	border-radius: 0 0 5px 0;
+}
+
+#infoTop {
+	padding: 1% 1.5% 1.5% 1.5%;
+}
+
+ul.accordion {
+	margin-left: 0;
+}
+
+.accordion .accordion-navigation > a, .accordion dd > a {
+	background: #8b6283;
+	font-family: Coda;
+}
+
+.accordion .accordion-navigation > a:hover, .accordion dd > a:hover {
+	background: #222;
+	color: #dedede;
+	font-family: Coda;
+}
+
+.accordion .accordion-navigation.active > a, .accordion dd.active > a {
+	background: #222;
+	color: #dedede;
+	font-family: Coda;
+}
+
+.accordion-navigation > a:after {
+  content: "> more";
+  padding-left: 5px;
+  float: right;
+  font-size: 12px; }
+.accordion-navigation.active a:after {
+  content: "< less"; }
+
+
+/*==== Footer ====*/
+
+#footer {
+	clear: both;
+	font-family: Coda;
+	color: rgba(2, 2, 2, .3);
+	padding-top: 2px;
+	background-color: transparent;
+	text-align: center;
+}
+
+
+/**************** Responsiveness ****************/
+
+/* Low Res Desktop or Huge Tablet Specs */
+/*@media screen and (min-width: 681px) and (max-width: 1040px) {
+			
+	#page {
+		width: auto;
+		margin: 0 2% 0 2%;
+	}		
+	
+	#colorscheme {
+		margin-right: 4%;
+	}
+	
+	#content {
+		width: 60%;
+		padding: 0 1.5%;
+		/*background: yellow;*/
+/*		display: block;
+	}
+	
+	#interaction {
+		width: 40%;
+		padding: 0 1.5%;
+	}
+	
+} /* End Low Rest Desktop / Huge Tablet Media Query */
+
+
+/* Layout - Tablet Size Changes - Content Stacks */
+/*@media screen and (min-width: 651px) and (max-width: 790px) {
+	
+	#page {
+		width: auto;
+		margin: 0 2% 0 2%;
+	}
+
+	/*
+	#navMenu {
+		background: #dedede;
+		display: inline;
+		margin: 2% 0 0 15%;
+		border: none;
+		float: left;
+		font-size: 1.45em;
+		font-family: IndieFlower, Arial;
+		
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-indent: 1px;
+		text-overflow: '';
+	}*/
+
+/*	#colorscheme {
+		display: inline;
+		margin: 3% 3% 0 0;
+		border: none;
+		float: right;
+		font-size: 1.20em;
+		
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-indent: 1px;
+		text-overflow: '';
+	}
+	
+	/*
+	.navbar ul {
+		display: none;
+	}*/
+
+/*	.navbar li {
+		font-size: 1.40rem;
+	}
+	
+	#content {
+		width: 65%;
+		/*background: blue;*/
+/*		float: left;
+		border-radius: 10px 0 0 10px;
+	}
+	
+	#interaction {
+		float: right;
+		width: 35%;
+		border-radius: 0 10px 10px 0;
+	}
+	
+
+} /* End Tablet Size Media Query */
+
+
+/* Layout - Phone Size Modifications - Content Still Stacks */
+/*@media screen and (min-width: 220px) and (max-width: 650px) {
+
+	h1 {
+		font-size: 1.45rem;
+	}
+
+	#page {
+		width: auto;
+		margin: 0 2% 0 2%;
+	}
+	
+	.navbar ul {
+		display: none;
+	}
+	
+	#navMenu {
+		background: #dedede;
+		display: inline;
+		margin: 2% 0 0 15%;
+		border: none;
+		float: left;
+		font-size: 1.35em;
+		font-family: IndieFlower, Arial;
+		border-radius: 5px 5px 0 0;
+		
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-indent: 1px;
+		text-overflow: '';
+	}
+	
+	#colorscheme {
+		display: inline;
+		margin: 2% 15% 0 0;
+		border: none;
+		float: right;
+		font-size: 1.35em;
+		border-radius: 5px 5px 0 0;
+		
+		-webkit-appearance: none;
+		-moz-appearance: none;
+		text-indent: 1px;
+		text-overflow: '';
+	}
+	
+	#content {
+		width: 100%;
+		padding: 0 3% 3% 3%;
+		/*background: purple;*/
+/*		border-radius: 10px 10px 0 0;
+	}
+	
+	#interaction {
+		width: 100%;
+		padding: 1% 3% 1% 3%;
+		border-radius: 0 0 10px 10px;
+	}
+	
+} /* End Phone Size Media Query */
+
