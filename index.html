@@ -1,82 +1,165 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<link rel="stylesheet" href="css/normalize.css">
-		<link rel="stylesheet" href="css/style.css">
-		<link rel="icon" type="image/ico" href="favicon.ico">
-		<title>Game Site Alpha</title>
-	</head>
-	<body>
-		<div id="page">
-			<div class="navbar">
-				<ul>
-					<!--<li><a href="index.html">&nbsp;Index&nbsp;</a></li>-->
-					<li><a href="dnd.html">&nbsp;DnD&nbsp;</a></li>
-					<li><a href="star_wars.html">&nbsp;Star Wars&nbsp;</a></li>
-					<li><a href="table_top.html">&nbsp;Table Top&nbsp;</a></li>
-					<li><a href="wan.html">&nbsp;WAN&nbsp;</a></li>
-					<li><a href="lan.html">&nbsp;LAN&nbsp;</a></li>
-				</ul>
-				<select id="colorscheme">
-					<option value="tangela">Tangela</option>
-					<option value="vulpix">Vulpix</option>
-					<option value="butterfree">Butterfree</option>
-					<option value="dewgong">Dewgong</option>
-					<option value="oddish">Oddish</option>
-					<option value="murkrow">Murkrow</option>
-					<option value="seaking">Seaking</option>
-					<option value="rhyhorn">Rhyhorn</option>
-					<option value="vaporeon">Vaporeon</option>
-					<option value="pinsir">Pinsir</option>
-					<option value="sharpedo">Sharpedo</option>
-				</select>
-			</div> <! END OF .NAVBAR DIV />
-			<div id="content">
-				<h1>General Site Info / About</h1>
-				<hr>
-				<p>Hello welcome to the site! This is an ongoing project to help organize all the different gaming functions that happen to be going on in my life. 
-				Also it serves as a demo and learning experience in order to get used to coding again after a long hiatus.</p>
-				<hr>
-				<h2>Latest Update: 9/15/15</h2>
-				<p>Just retooled all of the CSS for the different pages. Might have to change a few others. Added padding when page shrinks. 
-				The color selector was removed on the pages I liked the default theme, can add again later if the users want the functionality.
-				Looking to upload current progress to GitHub once the changes are completed today.
-				Then I need to get back on track with the TreeHouse courses since I am still a few weeks behind :/</p>
-				<hr>
-				<p>The content portion here will be replaced when you select which activity you're interested in from the top menu.
-				Each page will have its own interaction area on the right side for voting and the such.
-				Different events will be able to be created in order to solidify when something is happening and to group activities that occur on that date to the event.</p>
-				<p>DnD - The Dungeons & Dragons session that happens almost every Thursday @ 8-8:30pm</p>
-				<p>Star Wars - The Star Wars roleplaying session which occurs every other week usually on a Tuesday or Wednesday night.</p>
-				<p>Table Top - A night of various board or card games hosted every other Wednesday from 7:30pm until whenever.</p>
-				<p>WAN - An upcoming weekly or bi-weekly event to organize a video game session online. Games may change every week.</p>
-				<p>LAN - Happens every few months or so usually on a weekend. Bring your rig over and let's play games until our eyes hurt!</p>
-			</div> <! END OF CONTENT DIV />
-			<div id="interaction">
-				<div class="insertContent">
-					<p>
-						<input type="text" id="newText" size="36" maxlength="40" placeholder="Comment & Click -->">
-						<input type="button" value="+" id="butt1" onclick="addRow()">
-					</p>
-				</div>
-				<p><a href="http://www.reddit.com/">Avoid this site if you want to be productive.</a></p>
-				<p>Can't get messages to persist. Append time if they do</p>
-				<p>Where the votes and stuff go</p>
-				<p>When should it happen?</p>
-				<p>What games should we play?</p>
-				<p>Where's the food coming from?</p>
-				<p>Eventually add a PHP forum</p>
-				<p>All threads listed by last posted on Index</p>
-				<p>Latest thread for each section on its own page</p>
-				
-			</div> <! END OF INTERACTION DIV/>
-			<div id="footer">
-				<p>Work in progress -- Made by Brandon</p>
-			</div> <! END OF FOOTER DIV/>
-		</div> <! END OF PAGE DIV/>
-		
-		<script src="http://code.jquery.com/jquery-1.11.0.min.js" type="text/javascript"></script>
-		<script src="js/scripts.js" type="text/javascript"></script>
-	</body>
+<head>
+	<!--<meta name="viewport" content="width=device-width, initial-scale=1.0" />-->
+	<title>Game Site Alpha</title>
+
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/foundation.css">
+	<link rel="stylesheet" href="css/index.css">
+	<link rel="icon" type="image/ico" href="favicon.ico">
+
+	<script src="js/vendor/jquery.js"></script>
+	<script src="js/foundation/foundation.js"></script>
+	<script src="js/foundation/foundation.topbar.js"></script>
+	<script src="js/foundation/foundation.accordion.js"></script>
+	<script src="js/foundation/foundation.reveal.js"></script>
+
+</head>
+<body>
+	<div class="contain-to-grid fixed">
+		<nav class="top-bar" data-topbar role="navigation">
+			<!-- Tile Area -->
+		    <ul class="title-area">
+		      <li class="name"><h1><a href="index.html">unwind_exhale</a><h1></li>
+		      <li class="toggle-topbar menu-icon"><a href="#"><span>Menu</span></a></li>
+		    </ul>
+
+			<section class="top-bar-section">
+				<!-- Left Nav Section -->
+				<!--
+			 	<ul class="left">
+					<li><a href="dnd.html">DnD</a></li>
+					<li><a href="star_wars.html">Star Wars</a></li>
+					<li><a href="table_top.html">Table Top</a></li>
+					<li><a href="wan.html">WAN</a></li>
+					<li><a href="lan.html">LAN</a></li>
+				</ul> -->
+			    <!-- Right Nav Section -->
+			    <ul class="right">
+			      <li class="has-dropdown not-click"><a href="#">otherLinks</a>
+			        <ul id="otherRealms" class="dropdown">
+						<li><a href="https://www.youtube.com/watch?v=xDmBtNrC5Lc&feature=youtu.be">Ceramics Master</a></li>	
+						<li><a href="https://www.youtube.com/watch?v=QgNDao7m41M">Black Holes</a></li>
+						<li><a href="http://chrisbeaumont.org/holdem_odds/#8H+QS">Hold 'em Odds</a></li>
+						<li><a href="http://www.pokepalettes.com/">Pokepalettes</a></li>
+						<li><a href="http://hermann.is/gravity/">Gravity Simulator</a></li>
+						<li><a href="https://np.reddit.com/r/DnD/comments/3jpksw/gandalf_was_really_just_fighter_with_int18/">Fighter Gandalf</a></li>
+			        </ul>
+			      </li>
+			      <li class="has-dropdown not-click"><a href="#">otherRealms</a>
+			        <ul id="otherRealms" class="dropdown">
+						<li><a href="dnd.html">DnD</a></li>
+						<li><a href="star_wars.html">Star Wars</a></li>
+						<li><a href="table_top.html">Table Top</a></li>
+						<li><a href="wan.html">WAN</a></li>
+						<li><a href="lan.html">LAN</a></li>
+			        </ul>
+			      </li>
+			    </ul>
+			</section>
+		</nav>
+	</div><!-- End Sticky Grid Nav -->
+	
+	<div class="row">
+		<div id="contentArea" class="medium-8 columns panel">
+
+			<ul id="buttonInfo" class="button-group even-3 radius">
+				<li><a href="#" class="button" data-reveal-id="siteInfo">Info</a></li>
+					<div id="siteInfo" class="reveal-modal" data-reveal aria-labelledby="title1" aria-hidden="true" role="dialog">
+					  <h2 id="title1">Site Info</h2>
+					  <p>Hello welcome to the site! This is an ongoing project to help organize all the different gaming functions that happen to be going on in my life. 
+						Also it serves as a demo and learning experience in order to get used to coding again after a long hiatus. 
+						Click or touch a heading below to reveal the content.</p>
+					  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+					</div>
+				<li><a href="#" class="button" data-reveal-id="goals">Goals</a></li>
+					<div id="goals" class="reveal-modal" data-reveal aria-labelledby="title2" aria-hidden="true" role="dialog">
+					  <h2 id="title2">Site Goals</h2>
+					  <p>Keep tinkering around to make the site easier to use and eventually add user interactivity.
+						Each page will have its own interaction area on the right side for discussion, voting and the such.
+						Different events will be able to be created in order to solidify when something is happening and to group activities that occur on that date to the event.</p>
+					  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+					</div>
+				<li><a href="#" class="button" data-reveal-id="pagesInfo">Pages</a></li>
+					<div id="pagesInfo" class="reveal-modal" data-reveal aria-labelledby="title3" aria-hidden="true" role="dialog">
+					  <h2 id="title3">Other Pages</h2>
+					  <p><a href="dnd.html" id="pinky">DnD</a> - The Dungeons & Dragons session that happens almost every Thursday @ 8-8:30pm</p>
+					  <p><a href="star_wars.html" id="pinky">Star Wars</a> - The Star Wars roleplaying session which occurs every other week usually on a Tuesday or Wednesday night.</p>
+					  <p><a href="table_top.html" id="pinky">Table Top</a> - A night of various board or card games hosted every other Wednesday from 7:30pm until whenever.</p>
+					  <p><a href="wan.html" id="pinky">WAN</a> - An upcoming weekly or bi-weekly event to organize a video game session online. Games may change every week.</p>
+					  <p><a href="lan.html" id="pinky">LAN</a> - Happens every few months or so usually on a weekend. Bring your rig over and let's play games until our eyes hurt!</p>
+					  <a class="close-reveal-modal" aria-label="Close">&#215;</a>
+					</div>
+			</ul> <!-- END BUTTON GROUP -->
+
+			<h1 class="clear">News/Updates</h1>
+			<hr>
+			<ul class="accordion" data-accordion>
+			  <li class="accordion-navigation">
+			    <a href="#p4">Update: 9/28/15</a>
+			    <div id="p4" class="content active">
+			    	I am fiddling around with the Foundation 5.5.2 framework in order to make the site look and behave a little more consistently.
+			    	The navigation menu and the collapsing content sections are pretty great. It took a while to get them functioning properly. 
+			    	In the future I will see which features will be ported to the other pages of the site.
+			    	It will depend on what the group needs as well as how much I think they will use it.
+			    </div>
+			  </li>
+			  <hr>			  
+			  <li class="accordion-navigation">
+			    <a href="#p3">Happy Birthday Spencer!</a>
+			    <div id="p3" class="content">
+					Spencer just turned 30! We had a great time catching up at his parent's place where the surprise party took place.
+					All his classic rock posters were hung up in the back yard. Fun people, pizza and drinks. Doesn't get better than that.
+			    </div>
+			  </li>
+			  <hr>
+			  <li class="accordion-navigation">
+			    <a href="#p2">Update: 9/15/15</a>
+			    <div id="p2" class="content">
+					Just retooled all of the CSS for the different pages. Might have to change a few others. Added padding when page shrinks. 
+					The color selector was removed on the pages I liked the default theme, can add again later if the users want the functionality.
+					Looking to upload current progress to GitHub once the changes are completed today.
+					Then I need to get back on track with the TreeHouse courses since I am still a few weeks behind :/
+			    </div>
+			  </li>
+			  <hr>
+			  <li class="accordion-navigation">
+			    <a href="#p1">Update: 8/20/15</a>
+			    <div id="p1" class="content">
+					Site layout is mostly finished. Still need lots of content to fill it out. Need to make separate pages as well.
+			    </div>
+			  </li>
+			  <hr>
+			  	<li class="accordion-navigation">
+			    <a href="#p0">Update: 7/27/15</a>
+			    <div id="p0" class="content">
+					Basic frame for site is there...very basic.
+			    </div>
+			  </li>
+			  <hr>
+			</ul> <!-- END ACCORDION UL -->
+		</div> <!-- END OF #contentArea DIV -->
+		<div id="interaction" class="medium-4 columns panel right">
+			<h1>To Do List</h1>
+			<hr>
+			<ol>
+				<li>Get more content from users and ad pages for that content</li>
+				<li>Customize layout for other pages</li>
+				<li>Eventually add a back end for interactivity</li>
+				<li>Latest thread for each section on its own page</li>
+				<li>All threads listed by last posted for current site section</li>
+		</div> <! END OF INTERACTION DIV/>
+	</div> <!-- END class="row" DIV -->
+	<div id="footer" class="center">
+		<p>Work in progress -- Made by Brandon</p>
+	</div> <! END OF FOOTER DIV/>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(document).foundation();
+});
+</script>
+
+</body>
 </html>

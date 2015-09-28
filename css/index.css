@@ -20,49 +20,27 @@
     src: url(../fonts/index/indie-flower.ttf);	
 }
 
+
 /*==== Global ====*/
 
-@viewport {
-	width: auto;
-}
-
-html {
-  box-sizing: border-box;
-}
-
-*, *:before, *:after {
-  box-sizing: inherit;
-}
-
-body/*, html             was having background color issues */
+body
  {
-	margin: 0;
-    padding: 0;
-	background: #392939;
+	background-image: url("../img/159001_kibunya_39_scenic_sky.jpg");
+    background-color: #392939;;
+	background-attachment: fixed;
+	background-size: cover;
 }
 
-#page {
-    width: 1024px;
-    margin: 0 auto;
-    background: transparent;
+p {
+	font-family: Coda;
 }
 
 a {
-	text-decoration: none;
 	color: #dedede;
 }
 
-a:visited {
-
-	font-style: none;
-}
-
 a:hover {
-	font-style: none;
-}
-
-a:after {
-	font-style: none;
+	color: #fefefe;
 }
 
 h1 {
@@ -78,112 +56,115 @@ h2 {
 }
 
 hr {
-	/*margin-top: -20px; */
+	margin-top: -.07rem;
 	border: 0; 
 	height: 1px; 
 	background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-/*==== Header ====*/
-
-#navSelect {
-	border-bottom: 2px #222;
+ol {
+	list-style: square;
 }
 
-.navbar {
-	width: auto;
-	font-weight: bold;
-	background-color: #transparent;
+.has-dropdown ul {
+	display:none;
+}
+.has-dropdown:hover ul {
+	display:block;
 }
 
-#navMenu {
-	display: none;
+#pinky {
+	color: #bd94b4;
 }
 
-/*.navbar select {
-	padding: 15px 0 6px 2%;
-	font-family: IndieFlower;
-	font-size: 1.0em;
-	font-weight: bold;
-	padding: 0;
-	margin: 0;
-}*/
+/*==== Navigation ====*/
 
-.navbar ul {
-    padding: 15px 0 0 15px;
-    margin: 5px 5px;
-    list-style-type: none;
-	float: left;
+.top-bar-section ul li a {
+	font-family: Coda;
+	font-size: 1.1em;
+	/*color: #dedede;*/
 }
 
-.navbar li {
-    display: inline;
-	font-family: IndieFlower, Arial;
-	font-size: 1.5em; 
-	/*  Outline for the links in Navbar, not sure if they look good or not
-	border-top: 5px groove #111;
-	border-left: 1px solid #444;
-	border-right: 5px groove #111;
-	border-bottom: none;
-	*/
-}
-
-.navbar a {
-    text-decoration: none;
-    color: #dedede;
-}
-
-.navbar a:hover {
-    background-color: white;
+.top-bar-section ul li a:hover {
 	border-radius: 5px;
-	color: #392939;
-	text-shadow: 2px 1px 0 gray;
+	color: #666;
+	text-shadow: 1px 1px 0 #444;
 }
 
-/* Right side of Header area */
-#colorscheme {
-	background: #dedede;
-    margin: 2% 2% 0 0;
-	border: none;
-	float: right;
-	font-size: 1.45em;
-	font-family: IndieFlower, Arial;
-	border-radius: 7px;
-	
-	-webkit-appearance: none;
-    -moz-appearance: none;
-    text-indent: 1px;
-    text-overflow: '';
+#otherRealms li a {
+	font-family: Coda;
+	font-size: 1.1em;
 }
-
-/*#colorscheme select {
-
-}*/
 
 /*==== Content ====*/
 
-#content {
-	float: left;
-	width: 60%;
+.button-group.even-3 li > button, .button-group.even-3 li .button {
+	font-family: Coda;
+}
+
+#buttonInfo li a {
+	background: #8b6283;
+	color: #dedede;
+}
+
+#buttonInfo li a:hover {
+	background: #222;
+	color: #dedede;
+}
+
+#contentArea {
 	color: #392939;
 	background-color: #dedede;
 	font-family: Crete, Helvetica;
 	font-size: 1em;
-	padding: 0px 15px;
-	border-radius: 10px 0 0 10px;
+	padding: 1.5%;
+	border-radius: 0 0 5px 5px;
 }
 
 #interaction {
-	float: right;
-	width: 40%;
 	color: #392939;
 	font-family: Lobster;
 	font-size: 1em;
 	background: #8b6283;
-	padding: 0 15px;
-	border-radius: 0 10px 10px 0;
+	padding: 1.5%;
 	overflow: s-resize;
+	border: none;
+	border-radius: 0 0 5px 0;
 }
+
+#infoTop {
+	padding: 1% 1.5% 1.5% 1.5%;
+}
+
+ul.accordion {
+	margin-left: 0;
+}
+
+.accordion .accordion-navigation > a, .accordion dd > a {
+	background: #8b6283;
+	font-family: Coda;
+}
+
+.accordion .accordion-navigation > a:hover, .accordion dd > a:hover {
+	background: #222;
+	color: #dedede;
+	font-family: Coda;
+}
+
+.accordion .accordion-navigation.active > a, .accordion dd.active > a {
+	background: #222;
+	color: #dedede;
+	font-family: Coda;
+}
+
+.accordion-navigation > a:after {
+  content: "> more";
+  padding-left: 5px;
+  float: right;
+  font-size: 12px; }
+.accordion-navigation.active a:after {
+  content: "< less"; }
+
 
 /*==== Footer ====*/
 
@@ -194,15 +175,13 @@ hr {
 	padding-top: 2px;
 	background-color: transparent;
 	text-align: center;
-	/*position: absolute;
-	bottom: 0;
-	left: 15px;*/
 }
+
 
 /**************** Responsiveness ****************/
 
 /* Low Res Desktop or Huge Tablet Specs */
-@media screen and (min-width: 681px) and (max-width: 1040px) {
+/*@media screen and (min-width: 681px) and (max-width: 1040px) {
 			
 	#page {
 		width: auto;
@@ -217,7 +196,7 @@ hr {
 		width: 60%;
 		padding: 0 1.5%;
 		/*background: yellow;*/
-		display: block;
+/*		display: block;
 	}
 	
 	#interaction {
@@ -229,7 +208,7 @@ hr {
 
 
 /* Layout - Tablet Size Changes - Content Stacks */
-@media screen and (min-width: 651px) and (max-width: 790px) {
+/*@media screen and (min-width: 651px) and (max-width: 790px) {
 	
 	#page {
 		width: auto;
@@ -252,7 +231,7 @@ hr {
 		text-overflow: '';
 	}*/
 
-	#colorscheme {
+/*	#colorscheme {
 		display: inline;
 		margin: 3% 3% 0 0;
 		border: none;
@@ -270,14 +249,14 @@ hr {
 		display: none;
 	}*/
 
-	.navbar li {
+/*	.navbar li {
 		font-size: 1.40rem;
 	}
 	
 	#content {
 		width: 65%;
 		/*background: blue;*/
-		float: left;
+/*		float: left;
 		border-radius: 10px 0 0 10px;
 	}
 	
@@ -292,7 +271,7 @@ hr {
 
 
 /* Layout - Phone Size Modifications - Content Still Stacks */
-@media screen and (min-width: 220px) and (max-width: 650px) {
+/*@media screen and (min-width: 220px) and (max-width: 650px) {
 
 	h1 {
 		font-size: 1.45rem;
@@ -341,7 +320,7 @@ hr {
 		width: 100%;
 		padding: 0 3% 3% 3%;
 		/*background: purple;*/
-		border-radius: 10px 10px 0 0;
+/*		border-radius: 10px 10px 0 0;
 	}
 	
 	#interaction {
