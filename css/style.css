@@ -86,6 +86,10 @@ hr {
 
 /*==== Header ====*/
 
+#navSelect {
+	border-bottom: 2px #222;
+}
+
 .navbar {
 	width: auto;
 	font-weight: bold;
