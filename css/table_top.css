@@ -25,11 +25,9 @@ darkest: #5a4131
 
 body {
 	background: #5a4131;
-    background-image: url("../img/table-top-background.jpg");
-
+    	background-image: url("../img/table-top-background.jpg");
 	background-attachment: fixed;
 	background-size: cover;
-
 }
 
 a {
@@ -91,6 +89,7 @@ hr {
 	font-weight: none;
 	background-color: transparent;
 	color: #eee6cd;
+	display: none;
 	/* Make button rounder? Spice it up...and fix alignment */
 }
 
