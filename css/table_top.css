@@ -66,7 +66,7 @@ hr {
 
 .navbar {
 	font-family: Ye-Olde-Oak, Arial;
-	font-size: 1.35em;
+	font-size: 1.25em;
 
 }
 
@@ -151,7 +151,7 @@ hr {
 	}
 	
 	#colorscheme {
-		font-size: 1.5rem;
+		font-size: 1.25rem;
 	}
 	
 
@@ -160,7 +160,7 @@ hr {
 	}
 	
 	.navbar li {
-
+		font-size: 1.25rem;
 	}
 	
 	#content {
