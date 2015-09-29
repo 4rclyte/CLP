@@ -87,7 +87,7 @@ hr {
 
 #colorscheme {
 	font-family: Ye-Olde-Oak, Arial;
-	font-size: 1.35em;
+	font-size: 1.25em;
 	font-weight: none;
 	background-color: transparent;
 	color: #eee6cd;
@@ -122,6 +122,8 @@ hr {
 	
 	#colorscheme {
 		margin-right: 4%;
+		font-size: 1.25rem;
+		font-weight: normal;
 	}
 	
 	#content {
@@ -151,7 +153,7 @@ hr {
 	}
 	
 	#colorscheme {
-		font-size: 1.25rem;
+
 	}
 	
 
