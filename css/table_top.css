@@ -25,13 +25,13 @@ darkest: #5a4131
 
 body {
 	background: #5a4131;
-    	background-image: url("../img/table-top-background.jpg");
+    background-image: url("../img/table-top-background.jpg");
 	background-attachment: fixed;
 	background-size: cover;
 }
 
 a {
-	color: #eee6cd;
+	color: #ffffff;
 }
 
 h1 {
