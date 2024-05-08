@@ -57,6 +57,7 @@ $select.change(function(){
 //Change colorScheme via select menu ////////////////////////////////////////////////////////////////
 //Target the colorscheme selection menu for the change listener
 $( "#colorscheme" ).change(function () {
+	console.log("colorscheme changed");
 	var str = "<p>Changed CSS layout to: ";  //optional testing text
 	var selected = this.value;
 	
@@ -65,7 +66,7 @@ $( "#colorscheme" ).change(function () {
 	setLayoutColors( selected );
 	$( "#content" ).append( str ); // the rest of the optional testing text
 
-})// end change() function
+});// end change() function
 
 // Find the corresponding color object in the layoutColors color reference
 function searchColorLayout ( pokemon ) {
@@ -76,7 +77,7 @@ function searchColorLayout ( pokemon ) {
 				return layoutColors[key]; 
 		} // look through the object of objects to find an object with matching name, so you can object while you object -Xzibit
 	} // end for loop
-} //end searchColorLayout function
+}; //end searchColorLayout function
 
 
 // Apply the selected color layout to the different areas on the page
@@ -94,7 +95,7 @@ function setLayoutColors ( poke ) {
 	
 	/*$("#footer").css("color", newColor.darkest);  //not in use atm
 	$("#page").css("background-color", "#732000");  //set #pagebg to transparent for now */
-}
+};
 
 
 // Add a row of text to the #interaction area, can't find a way to make changes persist, seems crappy
